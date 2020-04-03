@@ -479,117 +479,127 @@ class HomePageState extends State<LandScapeHome> {
                                     Expanded(
                                       child: Column(
                                         children: <Widget>[
-                                          GestureDetector(
-                                            //First Tile
-                                            onLongPress: () {
-                                              print('long pressed');
-                                              setState(() {
-                                                tile1 = true;
-                                                showCartOptions = true;
-                                              });
-                                            },
-                                            onTap: () {
-                                              setState(() {
-                                                tile1 = false;
-                                                showCartOptions = false;
-                                              });
-                                            },
-                                            child: _buildListTile(
-                                                        context,
-                                                        '20',
-                                                        'Olympic Soccer Ball',
-                                                        '\$12',
-                                                        size,
-                                                        1,
-                                                        '(\$8.00 off)')
+//                                          GestureDetector(
+//                                            //First Tile
+//                                            onLongPress: () {
+//                                              print('long pressed');
+//                                              setState(() {
+//                                                tile1 = true;
+//                                                showCartOptions = true;
+//                                              });
+//                                            },
+//                                            onTap: () {
+//                                              setState(() {
+//                                                tile1 = false;
+//                                                showCartOptions = false;
+//                                              });
+//                                            },
 
-                                          ),
-                                          GestureDetector(
-                                            //Second Tile
-                                            onLongPress: () {
-                                              print('long pressed');
-                                              setState(() {
-                                                tile2 = true;
-                                              });
-                                            },
-                                            onTap: () {
-                                              setState(() {
-                                                tile2 = false;
-                                              });
-                                            },
+                                          Expanded(
+                                              child: _getListView(
+                                                  context,
+                                                  '20',
+                                                  'Olympic Soccer Ball',
+                                                  '\$12',
+                                                  size,
+                                                  1,
+                                                  '(\$8.00 off)')),
+//                                             _buildListTile(
+//                                                        context,
+//                                                        '20',
+//                                                        'Olympic Soccer Ball',
+//                                                        '\$12',
+//                                                        size,
+//                                                        1,
+//                                                        '(\$8.00 off)')
 
-                                            child: tile2 == true
-                                                ? _buildListTileLong(
-                                                    context,
-                                                    '10',
-                                                    'Phone Battery 10',
-                                                    size,
-                                                    2)
-                                                : option2 == true
-                                                    ? _buildListTile(
-                                                        context,
-                                                        '10',
-                                                        'Phone Battery 10',
-                                                        '\$12',
-                                                        size,
-                                                        2,
-                                                        '(\$8.00 off)')
-                                                    : _buildListTile(
-                                                        context,
-                                                        '10',
-                                                        'Phone Battery 10',
-                                                        '\$12',
-                                                        size,
-                                                        2,
-                                                        ''),
-                                          ),
-                                          GestureDetector(
-                                            //Third tile
-                                            onLongPress: () {
-                                              print('long pressed');
-                                              setState(() {
-                                                tile3 = true;
-                                              });
-                                            },
-                                            onTap: () {
-                                              setState(() {
-                                                tile3 = false;
-                                              });
-                                            },
-                                            onPanEnd: (_) {
-                                              print('Pan End');
-                                            },
-                                            onPanStart: (details) {
-                                              print('Pan Started: $details');
-                                            },
-                                            onLongPressUp: () {
-                                              print('Long press up ');
-                                            },
-                                            child: tile3 == true
-                                                ? _buildListTileLong(
-                                                    context,
-                                                    '12',
-                                                    'Phone Battery 10',
-                                                    size,
-                                                    3)
-                                                : option3 == true
-                                                    ? _buildListTile(
-                                                        context,
-                                                        '12',
-                                                        'Phone Battery 10',
-                                                        '\$12',
-                                                        size,
-                                                        3,
-                                                        '(\$8.00 off)')
-                                                    : _buildListTile(
-                                                        context,
-                                                        '12',
-                                                        'Phone Battery 10',
-                                                        '\$12',
-                                                        size,
-                                                        3,
-                                                        ''),
-                                          )
+                                          // ),
+//                                          GestureDetector(
+//                                            //Second Tile
+//                                            onLongPress: () {
+//                                              print('long pressed');
+//                                              setState(() {
+//                                                tile2 = true;
+//                                              });
+//                                            },
+//                                            onTap: () {
+//                                              setState(() {
+//                                                tile2 = false;
+//                                              });
+//                                            },
+//
+//                                            child: tile2 == true
+//                                                ? _buildListTileLong(
+//                                                    context,
+//                                                    '10',
+//                                                    'Phone Battery 10',
+//                                                    size,
+//                                                    2)
+//                                                : option2 == true
+//                                                    ? _buildListTile(
+//                                                        context,
+//                                                        '10',
+//                                                        'Phone Battery 10',
+//                                                        '\$12',
+//                                                        size,
+//                                                        2,
+//                                                        '(\$8.00 off)')
+//                                                    : _buildListTile(
+//                                                        context,
+//                                                        '10',
+//                                                        'Phone Battery 10',
+//                                                        '\$12',
+//                                                        size,
+//                                                        2,
+//                                                        ''),
+//                                          ),
+//                                          GestureDetector(
+//                                            //Third tile
+//                                            onLongPress: () {
+//                                              print('long pressed');
+//                                              setState(() {
+//                                                tile3 = true;
+//                                              });
+//                                            },
+//                                            onTap: () {
+//                                              setState(() {
+//                                                tile3 = false;
+//                                              });
+//                                            },
+//                                            onPanEnd: (_) {
+//                                              print('Pan End');
+//                                            },
+//                                            onPanStart: (details) {
+//                                              print('Pan Started: $details');
+//                                            },
+//                                            onLongPressUp: () {
+//                                              print('Long press up ');
+//                                            },
+//                                            child: tile3 == true
+//                                                ? _buildListTileLong(
+//                                                    context,
+//                                                    '12',
+//                                                    'Phone Battery 10',
+//                                                    size,
+//                                                    3)
+//                                                : option3 == true
+//                                                    ? _buildListTile(
+//                                                        context,
+//                                                        '12',
+//                                                        'Phone Battery 10',
+//                                                        '\$12',
+//                                                        size,
+//                                                        3,
+//                                                        '(\$8.00 off)')
+//                                                    : _buildListTile(
+//                                                        context,
+//                                                        '12',
+//                                                        'Phone Battery 10',
+//                                                        '\$12',
+//                                                        size,
+//                                                        3,
+//                                                        ''),
+//                                          )
                                         ],
                                       ),
                                     ),
@@ -661,7 +671,9 @@ class HomePageState extends State<LandScapeHome> {
       option1 = false,
       option2 = false,
       option3 = false,
-      showCartOptions = false;
+      showCartOptionsItem1 = false,
+      showCartOptionsItem2 = false,
+      showCartOptionsItem3 = false;
 
   _buildListTile(
       BuildContext context, leading, title, trailing, size, index, end) {
@@ -703,7 +715,6 @@ class HomePageState extends State<LandScapeHome> {
                         ),
                       ),
                     ),
-
                     Column(
                       children: <Widget>[
                         Container(
@@ -720,19 +731,15 @@ class HomePageState extends State<LandScapeHome> {
                         ))
                       ],
                     ),
-                    showCartOptions?Visibility(
-                      child: Row(
-                        children: _listShowHideOptions(),
-                      ),
-
-                    ):Container(width: 100,)
-
-//
-//                    child: Row(
-//                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                      children:
-//                      _buildMiddleColumRowWhite(context, "Middle"),
-//                    ),
+                    showCartOptionsItem1
+                        ? Visibility(
+                            child: Row(
+                              children: _listShowHideOptions(),
+                            ),
+                          )
+                        : Container(
+                            width: 100,
+                          )
                   ],
                 ),
               ],
@@ -741,13 +748,276 @@ class HomePageState extends State<LandScapeHome> {
         ),
       ),
     );
+  }
 
+  Widget _getListView(
+      BuildContext context, leading, title, trailing, size, index, end) {
+    return Container(
+      child: ListView(
+        children: <Widget>[
+          //1
+          GestureDetector(
+            onTap: () {
+              showShortToast("1st tap");
+              showCartOptionsItem1 = false;
+              setState(() {});
+            },
+            onLongPress: () {
+              showShortToast("1st long");
+              showCartOptionsItem1 = true;
+              setState(() {});
+            },
+            child: Card(
+              color: Colors.white70,
+              child: Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Container(
+                  height: (size * 4) + 10,
+                  child: Column(
+                    children: <Widget>[
+                      Align(
+                          alignment: Alignment.topRight,
+                          child: Text(
+                            "\$24  ",
+                            style: TextStyle(fontSize: size),
+                          )),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          GestureDetector(
+                            onTap: () {},
+                            child: Container(
+                              color: Colors.white,
+                              height: (size * 3) + 0,
+                              width: (size * 5),
+                              child: Padding(
+                                padding: EdgeInsets.only(top: size - 2),
+                                child: Text(
+                                  "12",
+                                  style: TextStyle(fontSize: size + 2),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Column(
+                            children: <Widget>[
+                              Container(
+                                  padding: EdgeInsets.only(top: 3),
+                                  child: Text(
+                                    title,
+                                    style: TextStyle(fontSize: size),
+                                  )),
+                              Container(
+                                  child: Text(
+                                title,
+                                style: TextStyle(
+                                    fontSize: size,
+                                    color: Colors.cyan.shade800),
+                              ))
+                            ],
+                          ),
+                          showCartOptionsItem1
+                              ? Visibility(
+                                  child: Row(
+                                    children: _listShowHideOptions(),
+                                  ),
+                                )
+                              : Container(
+                                  width: 100,
+                                )
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          //2
+          GestureDetector(
+            onTap: () {
+              showShortToast("2st tap");
+              showCartOptionsItem2 = false;
+              setState(() {});
+            },
+            onLongPress: () {
+              showShortToast("2st long");
+              showCartOptionsItem2 = true;
+              setState(() {});
+            },
+            child: Card(
+              color: Colors.white70,
+              child: Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Container(
+                  height: (size * 4) + 10,
+                  child: Column(
+                    children: <Widget>[
+                      Align(
+                          alignment: Alignment.topRight,
+                          child: Text(
+                            "\$24  ",
+                            style: TextStyle(fontSize: size),
+                          )),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          GestureDetector(
+                            onTap: () {},
+                            child: Container(
+                              color: Colors.white,
+                              height: (size * 3) + 0,
+                              width: (size * 5),
+                              child: Padding(
+                                padding: EdgeInsets.only(top: size - 2),
+                                child: Text(
+                                  "12",
+                                  style: TextStyle(fontSize: size + 2),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Column(
+                            children: <Widget>[
+                              Container(
+                                  padding: EdgeInsets.only(top: 3),
+                                  child: Text(
+                                    title,
+                                    style: TextStyle(fontSize: size),
+                                  )),
+                              Container(
+                                  child: Text(
+                                title,
+                                style: TextStyle(
+                                    fontSize: size,
+                                    color: Colors.cyan.shade800),
+                              ))
+                            ],
+                          ),
+                          showCartOptionsItem2
+                              ? Visibility(
+                                  child: Row(
+                                    children: _listShowHideOptions(),
+                                  ),
+                                )
+                              : Container(
+                                  width: 100,
+                                )
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+//3
+          GestureDetector(
+            onTap: () {
+              showShortToast("3st tap");
+              showCartOptionsItem3 = false;
+              setState(() {});
+            },
+            onLongPress: () {
+              showShortToast("3st long");
+              showCartOptionsItem3 = true;
+              setState(() {});
+            },
+            child: Card(
+              color: Colors.white70,
+              child: Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Container(
+                  height: (size * 4) + 10,
+                  child: Column(
+                    children: <Widget>[
+                      Align(
+                          alignment: Alignment.topRight,
+                          child: Text(
+                            "\$24  ",
+                            style: TextStyle(fontSize: size),
+                          )),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          GestureDetector(
+                            onTap: () {},
+                            child: Container(
+                              color: Colors.white,
+                              height: (size * 3) + 0,
+                              width: (size * 5),
+                              child: Padding(
+                                padding: EdgeInsets.only(top: size - 2),
+                                child: Text(
+                                  "12",
+                                  style: TextStyle(fontSize: size + 2),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Column(
+                            children: <Widget>[
+                              Container(
+                                  padding: EdgeInsets.only(top: 3),
+                                  child: Text(
+                                    title,
+                                    style: TextStyle(fontSize: size),
+                                  )),
+                              Container(
+                                  child: Text(
+                                title,
+                                style: TextStyle(
+                                    fontSize: size,
+                                    color: Colors.cyan.shade800),
+                              ))
+                            ],
+                          ),
+                          showCartOptionsItem3
+                              ? Visibility(
+                                  child: Row(
+                                    children: _listShowHideOptions(),
+                                  ),
+                                )
+                              : Container(
+                                  width: 100,
+                                )
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+
+    //  return listView;
   }
 
   List<Widget> _listShowHideOptions() {
     List<Widget> boxes = List();
-    List<Color> colors = [Colors.red, Colors.amber, Colors.pink, Colors.greenAccent];
-    List<IconData> iconList = [Icons.edit,Icons.report,Icons.school,Icons.mobile_screen_share];
+    List<Color> colors = [
+      Colors.red,
+      Colors.amber,
+      Colors.pink,
+      Colors.greenAccent
+    ];
+    List<IconData> iconList = [
+      Icons.edit,
+      Icons.report,
+      Icons.school,
+      Icons.mobile_screen_share
+    ];
     //double height = (MediaQuery.of(context).size.height / 10);
     //double width = (height * 2.2);
     var tile = 4;
@@ -758,8 +1028,8 @@ class HomePageState extends State<LandScapeHome> {
       boxes.add(InkWell(
         child: Card(
           margin: const EdgeInsets.only(left: 4),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(4.0)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.0)),
           color: colors[i],
           child: Container(
             height: 25,
@@ -767,7 +1037,7 @@ class HomePageState extends State<LandScapeHome> {
             child: FittedBox(
               child: IconButton(
                 onPressed: () {
-                     _showDialog(context, tile);
+                  _showDialog(context, tile);
                   if (tile1 == true) {
                     setState(() {
                       tile1 = false;
@@ -785,7 +1055,7 @@ class HomePageState extends State<LandScapeHome> {
                 // iconSize: buttonSize,
 
                 icon: Icon(
-             //     Icons.edit,
+                  //     Icons.edit,
                   iconList[i],
                   color: Colors.white,
                   // size: iconSize,
