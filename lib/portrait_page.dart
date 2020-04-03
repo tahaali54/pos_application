@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_app/global.dart';
 
-import 'Custom Widgets/custom_button.dart';
-import 'Custom Widgets/slidable_list_tile.dart';
-import 'Custom Widgets/small_button.dart';
+import 'custom_widgets/custom_button.dart';
+import 'custom_widgets/slidable_list_tile.dart';
+import 'custom_widgets/small_button.dart';
 
 class PortraitPage extends StatelessWidget {
   List<Widget> _buildNavbar() {

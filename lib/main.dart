@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_app/global.dart';
-
+import 'package:responsive_app/landscape/home.dart';
 import 'portrait_page.dart';
 
 void main() => runApp(MyApp());
@@ -22,14 +22,25 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, constraints) {
-      if (constraints.maxWidth < constraints.maxHeight) {
-        GlobalCache.instance.setSizes(constraints.maxWidth);
-        //GlobalCache.instance.screenHeight = constraints.maxHeight;
-        return PortraitPage();
-      } else {
-        return Container(child: Text('Landscape'));
-      }
-    });
+    return  OrientationBuilder(
+        builder: (context, orientation) {
+          return orientation == Orientation.landscape
+              ? LandScapeHome()
+              : PortraitPage();
+        });
   }
+
+
+
+//  LayoutBuilder(builder: (context, constraints) {
+//  if (constraints.maxWidth < constraints.maxHeight) {
+//  GlobalCache.instance.setSizes(constraints.maxWidth);
+//  //GlobalCache.instance.screenHeight = constraints.maxHeight;
+//  return PortraitPage();
+//
+//  } else {
+//  return LandScapeHome();
+//  }
+//  });
+
 }
