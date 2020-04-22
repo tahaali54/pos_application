@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
-import '../global.dart';
+import 'package:responsive_app/potrait/global.dart';
 
 class SlidableListTile extends StatefulWidget {
   const SlidableListTile({
@@ -47,36 +47,46 @@ class _SlidableListTileState extends State<SlidableListTile> {
         ),
       ),
       secondaryActions: <Widget>[
-        IconSlideAction(
-          caption: 'Buy',
-          color: Colors.black38,
-          icon: Icons.voicemail,
-          onTap: () {
-            setState(() {
-              subtitleText = '(\$8.00 off)';
-            });
-          },
-        ),
-        IconSlideAction(
-          caption: 'Close',
-          color: Colors.yellow,
-          icon: Icons.close,
-          onTap: () {
-            setState(() {
-              subtitleText = '';
-            });
-          },
-        ),
-        IconSlideAction(
-          caption: 'Edit',
-          color: Colors.red,
-          icon: Icons.create,
-          onTap: () {
-            setState(() {
-              subtitleText = '(\$8.00 off)';
-            });
-          },
-        ),
+//        IconSlideAction(
+//          caption: 'Buy',
+//          color: Colors.black38,
+//          icon: Icons.voicemail,
+//          onTap: () {
+//            setState(() {
+//              subtitleText = '(\$8.00 off)';
+//            });
+//          },
+//        ),
+//        IconSlideAction(
+//          caption: 'Close',
+//          color: Colors.yellow,
+//          icon: Icons.close,
+//          onTap: () {
+//            setState(() {
+//              subtitleText = '';
+//            });
+//          },
+//        ),
+//        IconSlideAction(
+//          caption: 'Edit',
+//          color: Colors.red,
+//          icon: Icons.create,
+//          onTap: () {
+//            setState(() {
+//              subtitleText = '(\$8.00 off)';
+//            });
+//          },
+//        ),
+//        IconSlideAction(
+//          caption: 'Close',
+//          color: Colors.yellow,
+//          icon: Icons.close,
+//          onTap: () {
+//            setState(() {
+//              subtitleText = '';
+//            });
+//          },
+//        ),
       ],
     );
   }

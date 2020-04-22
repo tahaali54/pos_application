@@ -29,12 +29,12 @@ class LeftColumn extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                left: 8,
+                left: 4,
               ),
               child: Container(
                   color: Colors.yellow,
                   child: Padding(
-                    padding: const EdgeInsets.all(4.0),
+                    padding: const EdgeInsets.all(3.0),
                     child: Text(
                       '71',
                       style: TextStyle(fontSize: size - 4),
@@ -150,7 +150,7 @@ class LeftColumn extends StatelessWidget {
             Text(
               labels[i],
               style: TextStyle(
-                fontSize: size,
+                fontSize: size-1,
                 color:
                     selectedIndex == i ? Colors.orange : Colors.grey.shade700,
               ),
@@ -171,15 +171,15 @@ class LeftColumn extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                   border: Border.all(color: Colors.grey.shade700)),
-              height: size + 8,
-              width: size + 16,
+              height: size + 6,
+              width: size + 10,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 16),
               child: Container(
                 color: Colors.grey.shade700,
-                height: size + 8,
-                width: size + 16,
+                height: size + 6,
+                width: size + 10,
               ),
             ),
           ],

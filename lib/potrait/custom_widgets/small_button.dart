@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../global.dart';
+import 'package:responsive_app/potrait/global.dart';
 
 class SmallButtonWithText extends StatelessWidget {
   const SmallButtonWithText({
@@ -15,7 +14,7 @@ class SmallButtonWithText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 2),
       child: RawMaterialButton(
         onPressed: () {},
         shape: RoundedRectangleBorder(
@@ -49,7 +48,7 @@ class SmallButtonWithIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 2),
       child: RawMaterialButton(
         onPressed: () {},
         shape: RoundedRectangleBorder(

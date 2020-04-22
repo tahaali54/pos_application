@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 
 class GlobalCache {
   GlobalCache._privateConstructor();
-  static final GlobalCache instance = GlobalCache._privateConstructor();
+
+    static final GlobalCache instance = GlobalCache._privateConstructor();
 
   double screenHeight = 900;
 
   double iconSize = 21;
+
+  double leftNavBarIconSize = 31;
 
   double fontSize = 11;
 
@@ -16,13 +19,7 @@ class GlobalCache {
 
   double slidableListTileSize = 58;
 
-  setSizes(width) {
-    iconSize = (iconSize / 600) * width;
-    fontSize = (fontSize / 600) * width;
-    smallButtonSize = (smallButtonSize / 600) * width;
-    buttonSize = (buttonSize / 600) * width;
-    slidableListTileSize = (slidableListTileSize / 600) * width;
-  }
+
 }
 
 TextStyle setTextStyle(

@@ -8,6 +8,7 @@ import 'left_column.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class LandScapeHome extends StatefulWidget {
+
   @override
   State<StatefulWidget> createState() {
     return HomePageState();
@@ -42,9 +43,9 @@ class HomePageState extends State<LandScapeHome> {
                   height: height,
                   child: Center(
                       child: Text(
-                    title,
-                    style: TextStyle(color: Colors.white, fontSize: size),
-                  ))),
+                        title,
+                        style: TextStyle(color: Colors.white, fontSize: size),
+                      ))),
             ),
 
 //
@@ -235,9 +236,8 @@ class HomePageState extends State<LandScapeHome> {
   }
 
   _buildRightMiddleColumYellow(BuildContext context, size, color) {
-    double height = (MediaQuery.of(context).size.height / 10);
-    double width = (height * 2.0);
-
+    double height = (MediaQuery.of(context).size.height / 11);
+    double width = (height * 2.5);
     return Card(
       color: Colors.transparent,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -254,16 +254,16 @@ class HomePageState extends State<LandScapeHome> {
                 child: InkWell(
                   child: RawMaterialButton(
                     fillColor: color,
-                    elevation: 8,
+                    elevation: 4,
                     onPressed: () {},
                     child: Container(
 //                    decoration:
 //                        BoxDecoration(color: color, boxShadow: [BoxShadow()]),
-                      width: width / 4 - 8,
+                      width: width / 1.5,
                       height: height,
                       child: Icon(
                         Icons.arrow_back_ios,
-                        size: size * 2,
+                        size: size * 2.5,
                         color: Colors.white,
                       ),
                     ),
@@ -282,11 +282,11 @@ class HomePageState extends State<LandScapeHome> {
                       child: Container(
 //                    decoration:
 //                        BoxDecoration(color: color, boxShadow: [BoxShadow()]),
-                        width: width / 2 - 8,
+                        width: width / 1.5,
                         height: height,
                         child: Icon(
                           Icons.arrow_forward_ios,
-                          size: size * 2,
+                          size: size * 2.5,
                           color: Colors.white,
                         ),
                       ),
@@ -308,7 +308,7 @@ class HomePageState extends State<LandScapeHome> {
 //      DeviceOrientation.landscapeLeft,
 //    ]);
     double size = (1 / 100) * (MediaQuery.of(context).size.width);
-    double height = (MediaQuery.of(context).size.height / 10.5);
+    double height = (MediaQuery.of(context).size.height / 10);
     return Scaffold(
       backgroundColor: Color(0xFFE6E6E6),
       body: SafeArea(
@@ -335,12 +335,13 @@ class HomePageState extends State<LandScapeHome> {
 
                   // Middle Column
                   Expanded(
-                    flex: 9,
+                    flex: 10,
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Padding(
                           padding: EdgeInsets.only(
-                              top: (MediaQuery.of(context).size.width / 60),
+                              top: 0,
                               bottom: (MediaQuery.of(context).size.width / 70)),
                           child: FittedBox(
                             fit: BoxFit.contain,
@@ -463,7 +464,7 @@ class HomePageState extends State<LandScapeHome> {
                   ),
 
                   Expanded(
-                    flex: 5,
+                    flex: 6,
                     child: Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: Column(
@@ -472,134 +473,22 @@ class HomePageState extends State<LandScapeHome> {
                             child: Container(
                               color: Colors.white,
                               child: Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 8.0, bottom: 8),
+                                padding: const EdgeInsets.only(top: 8.0, bottom: 8),
                                 child: Column(
                                   children: <Widget>[
                                     Expanded(
                                       child: Column(
                                         children: <Widget>[
-//                                          GestureDetector(
-//                                            //First Tile
-//                                            onLongPress: () {
-//                                              print('long pressed');
-//                                              setState(() {
-//                                                tile1 = true;
-//                                                showCartOptions = true;
-//                                              });
-//                                            },
-//                                            onTap: () {
-//                                              setState(() {
-//                                                tile1 = false;
-//                                                showCartOptions = false;
-//                                              });
-//                                            },
-
                                           Expanded(
                                               child: _getListView(
                                                   context,
                                                   '20',
                                                   'Olympic Soccer Ball',
+                                                  'super produit additional 54',
                                                   '\$12',
                                                   size,
                                                   1,
                                                   '(\$8.00 off)')),
-//                                             _buildListTile(
-//                                                        context,
-//                                                        '20',
-//                                                        'Olympic Soccer Ball',
-//                                                        '\$12',
-//                                                        size,
-//                                                        1,
-//                                                        '(\$8.00 off)')
-
-                                          // ),
-//                                          GestureDetector(
-//                                            //Second Tile
-//                                            onLongPress: () {
-//                                              print('long pressed');
-//                                              setState(() {
-//                                                tile2 = true;
-//                                              });
-//                                            },
-//                                            onTap: () {
-//                                              setState(() {
-//                                                tile2 = false;
-//                                              });
-//                                            },
-//
-//                                            child: tile2 == true
-//                                                ? _buildListTileLong(
-//                                                    context,
-//                                                    '10',
-//                                                    'Phone Battery 10',
-//                                                    size,
-//                                                    2)
-//                                                : option2 == true
-//                                                    ? _buildListTile(
-//                                                        context,
-//                                                        '10',
-//                                                        'Phone Battery 10',
-//                                                        '\$12',
-//                                                        size,
-//                                                        2,
-//                                                        '(\$8.00 off)')
-//                                                    : _buildListTile(
-//                                                        context,
-//                                                        '10',
-//                                                        'Phone Battery 10',
-//                                                        '\$12',
-//                                                        size,
-//                                                        2,
-//                                                        ''),
-//                                          ),
-//                                          GestureDetector(
-//                                            //Third tile
-//                                            onLongPress: () {
-//                                              print('long pressed');
-//                                              setState(() {
-//                                                tile3 = true;
-//                                              });
-//                                            },
-//                                            onTap: () {
-//                                              setState(() {
-//                                                tile3 = false;
-//                                              });
-//                                            },
-//                                            onPanEnd: (_) {
-//                                              print('Pan End');
-//                                            },
-//                                            onPanStart: (details) {
-//                                              print('Pan Started: $details');
-//                                            },
-//                                            onLongPressUp: () {
-//                                              print('Long press up ');
-//                                            },
-//                                            child: tile3 == true
-//                                                ? _buildListTileLong(
-//                                                    context,
-//                                                    '12',
-//                                                    'Phone Battery 10',
-//                                                    size,
-//                                                    3)
-//                                                : option3 == true
-//                                                    ? _buildListTile(
-//                                                        context,
-//                                                        '12',
-//                                                        'Phone Battery 10',
-//                                                        '\$12',
-//                                                        size,
-//                                                        3,
-//                                                        '(\$8.00 off)')
-//                                                    : _buildListTile(
-//                                                        context,
-//                                                        '12',
-//                                                        'Phone Battery 10',
-//                                                        '\$12',
-//                                                        size,
-//                                                        3,
-//                                                        ''),
-//                                          )
                                         ],
                                       ),
                                     ),
@@ -626,7 +515,7 @@ class HomePageState extends State<LandScapeHome> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(
-                                top: 16.0, bottom: 12.0, right: 10.0),
+                                top: 16.0, bottom: 12.0),
                             child: FittedBox(
                               child: Row(
                                 mainAxisAlignment:
@@ -671,87 +560,23 @@ class HomePageState extends State<LandScapeHome> {
       option1 = false,
       option2 = false,
       option3 = false,
+
+      cartItem1 = false,
+      cartItem1Price = false,
+      cartItem2Price = false,
+      cartItem3Price = false,
+      cartItem2 = false,
+      cartItem3 = false,
       showCartOptionsItem1 = false,
+      showCartDescItem1 = true,
       showCartOptionsItem2 = false,
-      showCartOptionsItem3 = false;
+      showCartDescItem2 = true,
+      showCartOptionsItem3 = false,
+      showCartDescItem3 = true;
 
-  _buildListTile(
-      BuildContext context, leading, title, trailing, size, index, end) {
-    return Card(
-      color: Colors.white70,
-      child: Padding(
-        padding: const EdgeInsets.all(4.0),
-        child: GestureDetector(
-          onLongPress: () {
-            _listShowHideOptions();
-          },
-          child: Container(
-            height: (size * 4) + 10,
-            child: Column(
-              children: <Widget>[
-                Align(
-                    alignment: Alignment.topRight,
-                    child: Text(
-                      "\$24  ",
-                      style: TextStyle(fontSize: size),
-                    )),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    GestureDetector(
-                      onTap: () {},
-                      child: Container(
-                        color: Colors.white,
-                        height: (size * 3) + 0,
-                        width: (size * 5),
-                        child: Padding(
-                          padding: EdgeInsets.only(top: size - 2),
-                          child: Text(
-                            "12",
-                            style: TextStyle(fontSize: size + 2),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      children: <Widget>[
-                        Container(
-                            padding: EdgeInsets.only(top: 3),
-                            child: Text(
-                              title,
-                              style: TextStyle(fontSize: size),
-                            )),
-                        Container(
-                            child: Text(
-                          title,
-                          style: TextStyle(
-                              fontSize: size, color: Colors.cyan.shade800),
-                        ))
-                      ],
-                    ),
-                    showCartOptionsItem1
-                        ? Visibility(
-                            child: Row(
-                              children: _listShowHideOptions(),
-                            ),
-                          )
-                        : Container(
-                            width: 100,
-                          )
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _getListView(
-      BuildContext context, leading, title, trailing, size, index, end) {
+  _getListView(
+      BuildContext context, leading, title, desc, trailing, size, index, end) {
+    //option1 == true -> make showCartOptionsItem1 ==false & showCartDescItem1 ==true
     return Container(
       child: ListView(
         children: <Widget>[
@@ -760,11 +585,17 @@ class HomePageState extends State<LandScapeHome> {
             onTap: () {
               showShortToast("1st tap");
               showCartOptionsItem1 = false;
+              showCartDescItem1 = true;
+              cartItem1Price = false;
+              cartItem1 = false;
               setState(() {});
             },
             onLongPress: () {
               showShortToast("1st long");
               showCartOptionsItem1 = true;
+              showCartDescItem1 = false;
+              cartItem1Price = false;
+              cartItem1 = true;
               setState(() {});
             },
             child: Card(
@@ -774,59 +605,86 @@ class HomePageState extends State<LandScapeHome> {
                 child: Container(
                   height: (size * 4) + 10,
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
-                      Align(
-                          alignment: Alignment.topRight,
-                          child: Text(
-                            "\$24  ",
-                            style: TextStyle(fontSize: size),
-                          )),
+                      true
+                          ? Visibility(
+                              child: Align(
+                                  alignment: Alignment.topRight,
+                                  child: Text(
+                                    "\$24  ",
+                                    style: TextStyle(fontSize: size),
+                                  )),
+                            )
+                          : Container(),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              color: Colors.white,
-                              height: (size * 3) + 0,
-                              width: (size * 5),
-                              child: Padding(
-                                padding: EdgeInsets.only(top: size - 2),
-                                child: Text(
-                                  "12",
-                                  style: TextStyle(fontSize: size + 2),
-                                  textAlign: TextAlign.center,
-                                ),
+                          Container(
+                            color: Colors.white,
+                            height: (size * 3) + 0,
+                            width: (size * 4) + 3,
+                            child: Padding(
+                              padding: EdgeInsets.only(top: size - 2),
+                              child: Text(
+                                "12",
+                                style: TextStyle(fontSize: size + 2),
+                                textAlign: TextAlign.center,
                               ),
                             ),
                           ),
-                          Column(
-                            children: <Widget>[
-                              Container(
-                                  padding: EdgeInsets.only(top: 3),
-                                  child: Text(
-                                    title,
-                                    style: TextStyle(fontSize: size),
-                                  )),
-                              Container(
-                                  child: Text(
-                                title,
-                                style: TextStyle(
-                                    fontSize: size,
-                                    color: Colors.cyan.shade800),
-                              ))
-                            ],
+                          Padding(
+                            padding: const EdgeInsets.only(top: 3, left: 5),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Container(
+                                    child: Text(
+                                  title,
+                                  style: TextStyle(fontSize: size),
+                                )),
+                                showCartDescItem1
+                                    ? Visibility(
+                                        child: Container(
+                                            child: Text(
+                                          desc,
+                                          style: TextStyle(
+                                              fontSize: size ,
+                                              color: Colors.cyan.shade800),
+                                        )),
+                                )
+                                    : Container()
+                              ],
+                            ),
                           ),
                           showCartOptionsItem1
                               ? Visibility(
-                                  child: Row(
-                                    children: _listShowHideOptions(),
+                                  child: Padding(
+                                    padding:
+                                        const EdgeInsets.only(left: 20, top: 3),
+                                    child: Row(
+                                      children: _listShowHideOptions(),
+                                    ),
                                   ),
                                 )
-                              : Container(
-                                  width: 100,
-                                )
+                              : Container(),
+                          cartItem1Price?Visibility(
+                            child: Expanded(
+                              child: Align(
+                                alignment: Alignment.bottomRight,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 15),
+                                  child: Container(child: Text(
+                                    "(\$8.00 off)",
+                                    style: TextStyle(
+                                        fontSize: size - 1,
+                                        color: Colors.red),
+                                  ),),
+                                ),
+                              ),
+                            ),
+                          ):Container()
                         ],
                       ),
                     ],
@@ -841,11 +699,17 @@ class HomePageState extends State<LandScapeHome> {
             onTap: () {
               showShortToast("2st tap");
               showCartOptionsItem2 = false;
+              showCartDescItem2 = true;
+              cartItem2Price = false;
+              cartItem2 = false;
               setState(() {});
             },
             onLongPress: () {
               showShortToast("2st long");
               showCartOptionsItem2 = true;
+              showCartDescItem2 = false;
+              cartItem2Price = false;
+              cartItem2 = true;
               setState(() {});
             },
             child: Card(
@@ -855,6 +719,7 @@ class HomePageState extends State<LandScapeHome> {
                 child: Container(
                   height: (size * 4) + 10,
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       Align(
                           alignment: Alignment.topRight,
@@ -864,50 +729,72 @@ class HomePageState extends State<LandScapeHome> {
                           )),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              color: Colors.white,
-                              height: (size * 3) + 0,
-                              width: (size * 5),
-                              child: Padding(
-                                padding: EdgeInsets.only(top: size - 2),
-                                child: Text(
-                                  "12",
-                                  style: TextStyle(fontSize: size + 2),
-                                  textAlign: TextAlign.center,
-                                ),
+                          Container(
+                            color: Colors.white,
+                            height: (size * 3) + 0,
+                            width: (size * 4) + 3,
+                            child: Padding(
+                              padding: EdgeInsets.only(top: size - 2),
+                              child: Text(
+                                "12",
+                                style: TextStyle(fontSize: size + 2),
+                                textAlign: TextAlign.center,
                               ),
                             ),
                           ),
-                          Column(
-                            children: <Widget>[
-                              Container(
-                                  padding: EdgeInsets.only(top: 3),
-                                  child: Text(
-                                    title,
-                                    style: TextStyle(fontSize: size),
-                                  )),
-                              Container(
-                                  child: Text(
-                                title,
-                                style: TextStyle(
-                                    fontSize: size,
-                                    color: Colors.cyan.shade800),
-                              ))
-                            ],
+                          Padding(
+                            padding: const EdgeInsets.only(top: 3, left: 5),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Container(
+                                    child: Text(
+                                  title,
+                                  style: TextStyle(fontSize: size),
+                                )),
+                                showCartDescItem2
+                                    ? Visibility(
+                                        child: Container(
+                                            child: Text(
+                                          desc,
+                                          style: TextStyle(
+                                              fontSize: size,
+                                              color: Colors.cyan.shade800),
+                                        )),
+                                      )
+                                    : Container()
+                              ],
+                            ),
                           ),
                           showCartOptionsItem2
                               ? Visibility(
-                                  child: Row(
-                                    children: _listShowHideOptions(),
+                                  child: Padding(
+                                    padding:
+                                        const EdgeInsets.only(left: 20, top: 3),
+                                    child: Row(
+                                      children: _listShowHideOptions(),
+                                    ),
                                   ),
                                 )
-                              : Container(
-                                  width: 100,
-                                )
+                              : Container(),
+                          cartItem2Price?Visibility(
+                            child: Expanded(
+                              child: Align(
+                                alignment: Alignment.bottomRight,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 15),
+                                  child: Container(child: Text(
+                                    "(\$8.00 off)",
+                                    style: TextStyle(
+                                        fontSize: size - 1,
+                                        color: Colors.red),
+                                  ),),
+                                ),
+                              ),
+                            ),
+                          ):Container()
                         ],
                       ),
                     ],
@@ -922,11 +809,17 @@ class HomePageState extends State<LandScapeHome> {
             onTap: () {
               showShortToast("3st tap");
               showCartOptionsItem3 = false;
+              showCartDescItem3 = true;
+              cartItem3Price = false;
+              cartItem3 = false;
               setState(() {});
             },
             onLongPress: () {
               showShortToast("3st long");
               showCartOptionsItem3 = true;
+              showCartDescItem3 = false;
+              cartItem3Price = false;
+              cartItem3 = true;
               setState(() {});
             },
             child: Card(
@@ -945,50 +838,72 @@ class HomePageState extends State<LandScapeHome> {
                           )),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              color: Colors.white,
-                              height: (size * 3) + 0,
-                              width: (size * 5),
-                              child: Padding(
-                                padding: EdgeInsets.only(top: size - 2),
-                                child: Text(
-                                  "12",
-                                  style: TextStyle(fontSize: size + 2),
-                                  textAlign: TextAlign.center,
-                                ),
+                          Container(
+                            color: Colors.white,
+                            height: (size * 3) + 0,
+                            width: (size * 4) + 3,
+                            child: Padding(
+                              padding: EdgeInsets.only(top: size - 2),
+                              child: Text(
+                                "12",
+                                style: TextStyle(fontSize: size + 2),
+                                textAlign: TextAlign.center,
                               ),
                             ),
                           ),
-                          Column(
-                            children: <Widget>[
-                              Container(
-                                  padding: EdgeInsets.only(top: 3),
-                                  child: Text(
-                                    title,
-                                    style: TextStyle(fontSize: size),
-                                  )),
-                              Container(
-                                  child: Text(
-                                title,
-                                style: TextStyle(
-                                    fontSize: size,
-                                    color: Colors.cyan.shade800),
-                              ))
-                            ],
+                          Padding(
+                            padding: const EdgeInsets.only(top: 3, left: 5),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Container(
+                                    child: Text(
+                                  title,
+                                  style: TextStyle(fontSize: size),
+                                )),
+                                showCartDescItem3
+                                    ? Visibility(
+                                        child: Container(
+                                            child: Text(
+                                          desc,
+                                          style: TextStyle(
+                                              fontSize: size,
+                                              color: Colors.cyan.shade800),
+                                        )),
+                                      )
+                                    : Container()
+                              ],
+                            ),
                           ),
                           showCartOptionsItem3
                               ? Visibility(
-                                  child: Row(
-                                    children: _listShowHideOptions(),
+                                  child: Padding(
+                                    padding:
+                                        const EdgeInsets.only(left: 20, top: 3),
+                                    child: Row(
+                                      children: _listShowHideOptions(),
+                                    ),
                                   ),
                                 )
-                              : Container(
-                                  width: 100,
-                                )
+                              : Container(),
+                          cartItem3Price?Visibility(
+                            child: Expanded(
+                              child: Align(
+                                alignment: Alignment.bottomRight,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(top: 15),
+                                  child: Container(child: Text(
+                                    "(\$8.00 off)",
+                                    style: TextStyle(
+                                        fontSize: size - 1,
+                                        color: Colors.red),
+                                  ),),
+                                ),
+                              ),
+                            ),
+                          ):Container()
                         ],
                       ),
                     ],
@@ -1000,26 +915,25 @@ class HomePageState extends State<LandScapeHome> {
         ],
       ),
     );
-
     //  return listView;
   }
 
   List<Widget> _listShowHideOptions() {
     List<Widget> boxes = List();
     List<Color> colors = [
-      Colors.red,
+      Colors.cyan.shade800,
+      Colors.grey,
       Colors.amber,
-      Colors.pink,
-      Colors.greenAccent
+      Colors.red
     ];
     List<IconData> iconList = [
-      Icons.edit,
-      Icons.report,
-      Icons.school,
-      Icons.mobile_screen_share
+      Icons.person_outline,
+      Icons.linear_scale,
+      Icons.close,
+      Icons.edit
     ];
-    //double height = (MediaQuery.of(context).size.height / 10);
-    //double width = (height * 2.2);
+    double height = (MediaQuery.of(context).size.height / 20);
+    double width = (height);
     var tile = 4;
     var buttonSize = 5.0;
     var iconSize = 5.0;
@@ -1027,13 +941,13 @@ class HomePageState extends State<LandScapeHome> {
     for (int i = 0; i < 4; i++) {
       boxes.add(InkWell(
         child: Card(
-          margin: const EdgeInsets.only(left: 4),
+          margin: const EdgeInsets.only(left: 8),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.0)),
           color: colors[i],
           child: Container(
-            height: 25,
-            width: 25,
+            height: height,
+            width: width,
             child: FittedBox(
               child: IconButton(
                 onPressed: () {
@@ -1067,130 +981,6 @@ class HomePageState extends State<LandScapeHome> {
       ));
     }
     return boxes;
-
-    Row(
-      children: <Widget>[
-        Card(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
-          color: Colors.cyan.shade800,
-          child: IconButton(
-            onPressed: () {
-              _showDialog(context, tile);
-              if (tile1 == true) {
-                setState(() {
-                  tile1 = false;
-                });
-              } else if (tile2 == true) {
-                setState(() {
-                  tile2 = false;
-                });
-              } else {
-                setState(() {
-                  tile3 = false;
-                });
-              }
-            },
-            iconSize: buttonSize,
-            icon: Icon(
-              Icons.person_outline,
-              color: Colors.white,
-              size: iconSize,
-            ),
-          ),
-        ),
-        Card(
-          margin: const EdgeInsets.only(left: 16),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
-          color: Colors.grey,
-          child: IconButton(
-            onPressed: () {
-              _showDialog(context, tile);
-              if (tile1 == true) {
-                setState(() {
-                  tile1 = false;
-                });
-              } else if (tile2 == true) {
-                setState(() {
-                  tile2 = false;
-                });
-              } else {
-                setState(() {
-                  tile3 = false;
-                });
-              }
-            },
-            iconSize: buttonSize,
-            icon: Icon(
-              Icons.linear_scale,
-              color: Colors.white,
-              size: iconSize,
-            ),
-          ),
-        ),
-        Card(
-          margin: const EdgeInsets.only(left: 16),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
-          color: Colors.amber,
-          child: IconButton(
-            onPressed: () {
-              _showDialog(context, tile);
-              if (tile1 == true) {
-                setState(() {
-                  tile1 = false;
-                });
-              } else if (tile2 == true) {
-                setState(() {
-                  tile2 = false;
-                });
-              } else {
-                setState(() {
-                  tile3 = false;
-                });
-              }
-            },
-            iconSize: buttonSize,
-            icon: Icon(
-              Icons.close,
-              color: Colors.white,
-              size: iconSize,
-            ),
-          ),
-        ),
-        Card(
-          margin: const EdgeInsets.only(left: 16),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
-          color: Colors.red,
-          child: IconButton(
-            onPressed: () {
-              _showDialog(context, tile);
-              if (tile1 == true) {
-                setState(() {
-                  tile1 = false;
-                });
-              } else if (tile2 == true) {
-                setState(() {
-                  tile2 = false;
-                });
-              } else {
-                setState(() {
-                  tile3 = false;
-                });
-              }
-            },
-            iconSize: buttonSize,
-            icon: Icon(
-              Icons.edit,
-              color: Colors.white,
-              size: iconSize,
-            ),
-          ),
-        ),
-      ],
-    );
   }
 
   _buildListTileLong(BuildContext context, leading, title, size, tile) {
@@ -1368,9 +1158,24 @@ class HomePageState extends State<LandScapeHome> {
               FlatButton(
                 onPressed: () {
                   setState(() {
-                    if (tile == 1) option1 = true;
-                    if (tile == 2) option2 = true;
-                    if (tile == 3) option3 = true;
+                    if (cartItem1) {
+                      cartItem1 = false;
+                      cartItem1Price = true;
+                      showCartOptionsItem1 = false;
+                      showCartDescItem1 = true;
+                    }
+                    if (cartItem2) {
+                      cartItem2 = false;
+                      cartItem2Price = true;
+                      showCartOptionsItem2 = false;
+                      showCartDescItem2 = true;
+                    }
+                    if (cartItem3) {
+                      cartItem3 = false;
+                      cartItem3Price = true;
+                      showCartOptionsItem3 = false;
+                      showCartDescItem3 = true;
+                    }
                     print(tile);
                     Navigator.pop(context);
                   });
@@ -1405,25 +1210,26 @@ class HomePageState extends State<LandScapeHome> {
   }
 
   _buildAddButtonRow(size, height, title, color) {
+    double height = (MediaQuery.of(context).size.height / 11);
+    double width = (height * 2.5);
+
     return ClipRRect(
-      borderRadius: BorderRadius.circular(16.0),
-      child: InkWell(
-        child: Card(
-          child: RawMaterialButton(
-            fillColor: color,
-            elevation: 16,
-            onPressed: () {},
-            child: Container(
+      borderRadius: BorderRadius.circular(23.0),
+      child: Card(
+        child: RawMaterialButton(
+          fillColor: color,
+          elevation: 16,
+          onPressed: () {},
+          child: Container(
 //            color: color,
-              child: Center(
-                  child: Text(
-                '$title',
-                style: TextStyle(fontSize: size, color: Colors.white),
-                textAlign: TextAlign.center,
-              )),
-              height: height / 1.2,
-              width: height * 1.2,
-            ),
+            child: Center(
+                child: Text(
+              '$title',
+              style: TextStyle(fontSize: size, color: Colors.white),
+              textAlign: TextAlign.center,
+            )),
+            height: height ,
+            width: width/1.5,
           ),
         ),
       ),
