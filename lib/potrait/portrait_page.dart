@@ -956,6 +956,7 @@ class HomePageState extends State<PortraitPage> {
       Icons.person_outline,
       Icons.linear_scale,
       Icons.close,
+      
       Icons.edit
     ];
     double height = (MediaQuery.of(context).size.height / 30);
