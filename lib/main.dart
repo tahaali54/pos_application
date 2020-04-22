@@ -21,12 +21,13 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  OrientationBuilder(
-        builder: (context, orientation) {
-          return orientation == Orientation.landscape
-              ? LandScapeHome()
-              : PortraitPage();
-        });
+    return LayoutBuilder(builder: (context, constraints) {
+      return OrientationBuilder(builder: (context, orientation) {
+        return orientation == Orientation.portrait
+            ? PortraitPage()
+            : LandScapeHome();
+      });
+    });
   }
 
 }
